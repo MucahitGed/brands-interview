@@ -21,7 +21,7 @@ let products = [
   }
 ];
 
-// Create a new product
+// Yeni urun yaratma
 app.post('/api/products', (req, res) => {
   const newProduct = req.body;
   const newId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
@@ -30,12 +30,12 @@ app.post('/api/products', (req, res) => {
   res.status(201).send(newProduct);
 });
 
-// Get all products
+// Urunleri alma
 app.get('/api/products', (req, res) => {
   res.send(products);
 });
 
-// Get a single product by ID
+// secilen urunu alma
 app.get('/api/products/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const product = products.find(p => p.id === id);
@@ -43,7 +43,7 @@ app.get('/api/products/:id', (req, res) => {
   res.send(product);
 });
 
-// Update a product by ID
+// secilen urunu guncelleme
 app.put('/api/products/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const updatedProduct = req.body;
@@ -54,7 +54,7 @@ app.put('/api/products/:id', (req, res) => {
   res.send(updatedProduct);
 });
 
-// Delete a product by ID
+// secilen urunu silme
 app.delete('/api/products/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const index = products.findIndex(p => p.id === id);
