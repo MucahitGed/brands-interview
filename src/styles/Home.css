@@ -1,0 +1,29 @@
+.home-container {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .home-header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .home-content {
+    padding: 20px;
+    background-color: #fff;
+    min-height: 61vh;
+  }
+  
+  .home-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
